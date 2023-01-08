@@ -101,6 +101,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Window
       objectReference: {fileID: 0}
+    - target: {fileID: 8514638374578609196, guid: 319361f4c85c97a4f981ba644c125d02, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 319361f4c85c97a4f981ba644c125d02, type: 3}
 --- !u!1 &2530403872500067001 stripped
@@ -310,6 +314,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Window
       objectReference: {fileID: 0}
+    - target: {fileID: 8514638374578609196, guid: 319361f4c85c97a4f981ba644c125d02, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 319361f4c85c97a4f981ba644c125d02, type: 3}
 --- !u!1 &3818129687725580259 stripped
@@ -514,6 +522,10 @@ PrefabInstance:
     - target: {fileID: 8003886513822249992, guid: 319361f4c85c97a4f981ba644c125d02, type: 3}
       propertyPath: m_Name
       value: Window (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8514638374578609196, guid: 319361f4c85c97a4f981ba644c125d02, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 319361f4c85c97a4f981ba644c125d02, type: 3}
