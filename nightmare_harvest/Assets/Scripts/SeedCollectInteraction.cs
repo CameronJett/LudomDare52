@@ -1,0 +1,49 @@
+﻿using UnityEngine;
+
+public class SeedCollectInteraction : MonoBehaviour
+{
+	private Player player;
+	private Inventory inventory;
+
+	private bool collected;
+	public int color_seed;
+
+	private void Awake()
+	{
+		player = GameObject.Find("Player").GetComponent<Player>();
+		inventory = GameObject.Find("Player").GetComponent<Inventory>();
+
+		collected = true;
+	}
+
+	private void Update()
+	{
+		// Seeds regenerate when the player moves up and can't see them
+		if (player.transform.position.y > 6)
+		{
+			collected = false;
+		}
+
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (!collected && collision.tag == "Player")
+		{
+			collected = true;
+			if (color_seed == 0)
+            {
+				inventory.green_seed += Random.Range(1, 4);
+			}
+			else if (color_seed == 1)
+			{
+				inventory.blue_seed += Random.Range(1, 4);
+			}
+			else if (color_seed == 2)
+			{
+				inventory.red_seed += Random.Range(1, 4);
+			}
+
+		}
+	}
+}
