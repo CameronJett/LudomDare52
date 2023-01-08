@@ -123,6 +123,23 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &71734991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3818129687229574444, guid: 799f35f7eed7e57489aafb969d040f70, type: 3}
+  m_PrefabInstance: {fileID: 2019894581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &71734995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71734991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c129329f1d5f7445a2f4b528a9e4c5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &145163038
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,6 +199,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95157820cd64934429b43e365b3aaa76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &161941360 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3818129687725580259, guid: 799f35f7eed7e57489aafb969d040f70, type: 3}
+  m_PrefabInstance: {fileID: 2019894581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &161941364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161941360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c129329f1d5f7445a2f4b528a9e4c5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &232919257 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2530403872500067001, guid: 799f35f7eed7e57489aafb969d040f70, type: 3}
+  m_PrefabInstance: {fileID: 2019894581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &232919263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232919257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c129329f1d5f7445a2f4b528a9e4c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &458907764
@@ -742,7 +793,7 @@ GameObject:
   - component: {fileID: 2036195713}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
