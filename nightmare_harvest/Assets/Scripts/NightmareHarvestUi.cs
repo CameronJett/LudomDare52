@@ -3,8 +3,15 @@ using UnityEngine.UIElements;
 
 public class NightmareHarvestUi : MonoBehaviour {
 
-    private float time = 180;
-    private int score = 0;
+    public float time = 180;
+    public int score = 0;
+
+    private void Awake()
+    {
+        VisualElement root = GetComponent<UIDocument>().rootVisualElement;
+        root.visible = false;
+    }
+
     private void Update()
     {
         VisualElement game_over_ui = GameObject.Find("Game Over Ui").GetComponent<UIDocument>().rootVisualElement;
