@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    public bool interactable = true;
     SpriteRenderer spriteRenderer;
 
     private void Start()
@@ -25,5 +26,10 @@ public class Interactable : MonoBehaviour
         {
             spriteRenderer.color = new Color32 (50, 181, 233, 255);
         }
+    }
+
+    public void Interact()
+    {
+        spriteRenderer.color = new Color32(50, 181, 233, 255);
     }
 }
