@@ -97,6 +97,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Window
       objectReference: {fileID: 0}
+    - target: {fileID: 8003886513822249992, guid: 319361f4c85c97a4f981ba644c125d02, type: 3}
+      propertyPath: m_TagString
+      value: Window
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 319361f4c85c97a4f981ba644c125d02, type: 3}
 --- !u!1 &2530403872500067001 stripped
@@ -104,7 +108,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8003886513822249992, guid: 319361f4c85c97a4f981ba644c125d02, type: 3}
   m_PrefabInstance: {fileID: 5480397557996297905}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &5480397557996297916
+--- !u!61 &232919261
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +118,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -202,8 +206,43 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sill
       objectReference: {fileID: 0}
+    - target: {fileID: 4599320780151830526, guid: 9969322b5c3ae1b44816be2c2f68182b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9969322b5c3ae1b44816be2c2f68182b, type: 3}
+--- !u!1 &8332704493472018790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4599320780151830526, guid: 9969322b5c3ae1b44816be2c2f68182b, type: 3}
+  m_PrefabInstance: {fileID: 5510056798833788568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &198452687
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8332704493472018790}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &6624580475323919339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -267,6 +306,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Window (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8003886513822249992, guid: 319361f4c85c97a4f981ba644c125d02, type: 3}
+      propertyPath: m_TagString
+      value: Window
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 319361f4c85c97a4f981ba644c125d02, type: 3}
 --- !u!1 &3818129687725580259 stripped
@@ -284,7 +327,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -372,8 +415,43 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sill
       objectReference: {fileID: 0}
+    - target: {fileID: 4599320780151830526, guid: 9969322b5c3ae1b44816be2c2f68182b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9969322b5c3ae1b44816be2c2f68182b, type: 3}
+--- !u!1 &7222416152636406323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4599320780151830526, guid: 9969322b5c3ae1b44816be2c2f68182b, type: 3}
+  m_PrefabInstance: {fileID: 6624580475579665869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1678226988
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7222416152636406323}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &6624580475821955364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -444,7 +522,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8003886513822249992, guid: 319361f4c85c97a4f981ba644c125d02, type: 3}
   m_PrefabInstance: {fileID: 6624580475821955364}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &6624580475821955363
+--- !u!61 &408145023
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -454,7 +532,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -542,5 +620,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sill
       objectReference: {fileID: 0}
+    - target: {fileID: 4599320780151830526, guid: 9969322b5c3ae1b44816be2c2f68182b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9969322b5c3ae1b44816be2c2f68182b, type: 3}
+--- !u!1 &7222416154527077289 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4599320780151830526, guid: 9969322b5c3ae1b44816be2c2f68182b, type: 3}
+  m_PrefabInstance: {fileID: 6624580476967625815}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &459952846
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7222416154527077289}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
