@@ -551,6 +551,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3166617224652012643, guid: 5b39692ea0e2ebb42a83ae15b255a903, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5479498138667763626, guid: 5b39692ea0e2ebb42a83ae15b255a903, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -606,6 +610,10 @@ PrefabInstance:
     - target: {fileID: 7329178455120667023, guid: 5b39692ea0e2ebb42a83ae15b255a903, type: 3}
       propertyPath: m_Name
       value: BuildFloor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012757043542098696, guid: 5b39692ea0e2ebb42a83ae15b255a903, type: 3}
+      propertyPath: m_Name
+      value: SleepBubble
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b39692ea0e2ebb42a83ae15b255a903, type: 3}
@@ -1117,6 +1125,18 @@ MonoBehaviour:
   green_seed: 5
   blue_seed: 3
   red_seed: 3
+--- !u!114 &1766457531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766457519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9542fb33867d741298723c51dad9472e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1981457240
 GameObject:
   m_ObjectHideFlags: 0

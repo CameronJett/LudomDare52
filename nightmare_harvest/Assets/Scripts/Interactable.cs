@@ -9,14 +9,16 @@ public class Interactable : MonoBehaviour
 
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("collision tag: " + collision.tag);
         if(collision.tag == "Player")
         {
-            spriteRenderer.color = Color.red;
+            Debug.Log("player entered");
+            PlantSeed planter = GameObject.Find("Player").GetComponent<PlantSeed>();
+            planter.SetWindow( transform.gameObject.GetComponent<Window>() );
         }
     }
 
@@ -24,12 +26,14 @@ public class Interactable : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            spriteRenderer.color = new Color32 (50, 181, 233, 255);
+            Debug.Log("player exited");
+            PlantSeed planter = GameObject.Find("Player").GetComponent<PlantSeed>();
+            planter.SetWindow( null );
         }
     }
 
     public void Interact()
     {
-        spriteRenderer.color = new Color32(50, 181, 233, 255);
+        Debug.Log("Try to plant a seed");
     }
 }

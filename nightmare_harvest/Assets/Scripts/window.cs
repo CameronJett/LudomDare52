@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class window : MonoBehaviour
+public class Window : MonoBehaviour
 {
     bool isSleeping = false;
     bool isAboutToWakeUp = false;
     int count = 0;
     GameObject sleepPlaceholder;
     Transform sleepBubble; 
+    string seedType;
 
     // Start is called before the first frame update
     void Start()
@@ -97,5 +98,15 @@ public class window : MonoBehaviour
         {
             sleepBubble.GetComponent<Renderer>().enabled = !sleepBubble.GetComponent<Renderer>().enabled;
         }
+    }
+
+    public bool CanPlantSeedHere()
+    {   
+        return isSleeping && seedType == null;
+    }
+
+    public void PlantSeed(string seedType)
+    {
+        this.seedType = seedType;
     }
 }
