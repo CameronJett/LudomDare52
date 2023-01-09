@@ -45,4 +45,21 @@ public class Inventory : MonoBehaviour
 		return seedTypes[seedIndex];
 	}
 
+	public bool HasSeed()
+	{
+		if (seedIndex == 0)
+		{
+			return green_seed > 0;
+		}
+		else if (seedIndex == 1)
+		{
+			return blue_seed > 0;
+		}
+		else if (seedIndex == 2)
+		{
+			return red_seed > 0;
+		}
+		return false;
+	}
+
 }
