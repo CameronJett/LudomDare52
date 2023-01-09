@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 
 public class NightmareHarvestUi : MonoBehaviour {
 
-    public float time = 180;
+    public float time = -100;
     public int score = 0;
 
     private void Awake()
@@ -24,7 +24,7 @@ public class NightmareHarvestUi : MonoBehaviour {
 
         timerLabel.text = this.getTime();
 
-        if (time <= 0) {
+        if (time <= 0 && time > -100) {
             timerLabel.text = "Time: 0:00";
             root.visible = false;
 

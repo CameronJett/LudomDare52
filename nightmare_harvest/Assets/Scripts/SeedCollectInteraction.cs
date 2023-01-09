@@ -21,7 +21,7 @@ public class SeedCollectInteraction : MonoBehaviour
 	private void Update()
 	{
 		// Seeds regenerate when the player moves up and can't see them
-		if (player.transform.position.y > 6)
+		if (player.transform.position.y > 20)
 		{
 			collected = false;
 
@@ -40,15 +40,15 @@ public class SeedCollectInteraction : MonoBehaviour
 
 			if (color_seed == 0)
             {
-				inventory.green_seed += Random.Range(1, 4);
+				inventory.green_seed += Random.Range(2, 7);
 			}
 			else if (color_seed == 1)
 			{
-				inventory.blue_seed += Random.Range(1, 4);
+				inventory.blue_seed += Random.Range(2, 5);
 			}
 			else if (color_seed == 2)
 			{
-				inventory.red_seed += Random.Range(1, 4);
+				inventory.red_seed += Random.Range(2, 4);
 			}
 
 		}
