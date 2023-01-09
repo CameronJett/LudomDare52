@@ -40,9 +40,9 @@ public class NightmareHarvestUi : MonoBehaviour {
 
         Inventory inventory = GameObject.Find("Player").GetComponent<Inventory>();
 
-        greenLabel.text = "Green: " + inventory.green_seed;
-        blueLabel.text = "Blue: " + inventory.blue_seed;
-        redLabel.text = "Red: " + inventory.red_seed;
+        greenLabel.text = inventory.green_seed.ToString();
+        blueLabel.text = inventory.blue_seed.ToString();
+        redLabel.text = inventory.red_seed.ToString();
     }
     private string getTime() { 
         time -= Time.deltaTime;
