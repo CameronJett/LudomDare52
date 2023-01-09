@@ -13,12 +13,19 @@ public class Interactable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("collision tag: " + collision.tag);
         if(collision.tag == "Player")
         {
-            Debug.Log("player entered");
             PlantSeed planter = GameObject.Find("Player").GetComponent<PlantSeed>();
-            planter.SetWindow( transform.gameObject.GetComponent<Window>() );
+            Window window = transform.gameObject.GetComponent<Window>();
+            if (window.HasSeed())
+            {
+                NightmareHarvestUi ui = GameObject.Find("Ui").GetComponent<NightmareHarvestUi>();
+                ui.increaseScore(window.Harvest());
+            }
+            else 
+            {
+                planter.SetWindow( transform.gameObject.GetComponent<Window>() );
+            }
         }
     }
 
@@ -26,7 +33,6 @@ public class Interactable : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Debug.Log("player exited");
             PlantSeed planter = GameObject.Find("Player").GetComponent<PlantSeed>();
             planter.SetWindow( null );
         }
