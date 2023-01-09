@@ -18,7 +18,6 @@ public class Window : MonoBehaviour
     {
         sleepBubble = transform.GetChild(1);
         sl = sleepBubble.GetComponent<UnityEngine.U2D.Animation.SpriteLibrary>();
-        Debug.Log("Sprite Library: " + sl.ToString());
         WakeUp();
     }
 
@@ -59,7 +58,6 @@ public class Window : MonoBehaviour
         var StrB = Random.Range(0, 20);
         if (StrB >= 18)
         {
-            Debug.Log("going to sleep: " + StrB);
             GoToSleep();
         }
     }
@@ -75,12 +73,10 @@ public class Window : MonoBehaviour
         var StrB = Random.Range(0, 20);
         if (StrB >= 12 && isAboutToWakeUp)
         {
-            Debug.Log("Waking Up");
             WakeUp();
         }
         else if (StrB >= 18)
         {
-            Debug.Log("Hitting the snooze button");
             HitSnoozeButton();
         }
     }
@@ -91,6 +87,7 @@ public class Window : MonoBehaviour
         isAboutToWakeUp = false;
         sleepBubble.GetComponent<Renderer>().enabled = false;
         seedType = null;
+        sleepBubble.GetComponent<SpriteRenderer>().sprite = sl.GetSprite("dream", "0");
     }
 
     void HitSnoozeButton()
@@ -107,7 +104,12 @@ public class Window : MonoBehaviour
 
     public bool CanPlantSeedHere()
     {   
-        return isSleeping && seedType == null;
+        return isSleeping && !HasSeed();
+    }
+
+    public bool HasSeed() 
+    {
+        return seedType != null;
     }
 
     public void PlantSeed(string seedType)
@@ -118,9 +120,16 @@ public class Window : MonoBehaviour
     }
 
     void PromoteSeedLevel() {
-        if (seedLevel < 2 && seedType != null) {
+        if (seedLevel < 2 && HasSeed()) {
             seedLevel++;
             sleepBubble.GetComponent<SpriteRenderer>().sprite = sl.GetSprite(seedType, "" + this.seedLevel);
         }
+    }
+
+    public int Harvest()
+    {
+        int score = 100 * ( seedLevel + 1 ) ;
+        WakeUp();
+        return score;
     }
 }

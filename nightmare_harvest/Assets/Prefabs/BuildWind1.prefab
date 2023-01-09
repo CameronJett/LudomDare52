@@ -134,6 +134,12 @@ MonoBehaviour:
     - m_Name: 2
       m_Hash: 0
       m_Sprite: {fileID: 21300000, guid: be79412b6f8ab4703910804bb571ab0e, type: 3}
+  - m_Name: dream
+    m_Hash: 0
+    m_CategoryList:
+    - m_Name: 0
+      m_Hash: 0
+      m_Sprite: {fileID: 21300000, guid: 6bfaff5cf8e9db0479cc2c05c1109643, type: 3}
   m_SpriteLibraryAsset: {fileID: 0}
 --- !u!1 &1382580479268489727
 GameObject:
