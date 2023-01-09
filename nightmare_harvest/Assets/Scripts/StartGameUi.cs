@@ -28,7 +28,7 @@ public class StartGameUi : MonoBehaviour
 		inventory.blue_seed = 3;
 		inventory.red_seed = 3;
 
-		player.transform.SetPositionAndRotation(new Vector3((float)-13.68, (float)-4.07, 0), player.transform.rotation);
+		player.transform.SetPositionAndRotation(new Vector3((float)-13.68, (float)-4.07, -5), player.transform.rotation);
 		camera.transform.SetPositionAndRotation(new Vector3((float)-13.68, (float)-1.9, camera.transform.position.z), player.transform.rotation);
 
 		// Reset all starting variables here
