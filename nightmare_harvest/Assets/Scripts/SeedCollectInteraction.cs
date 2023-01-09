@@ -14,6 +14,8 @@ public class SeedCollectInteraction : MonoBehaviour
 		inventory = GameObject.Find("Player").GetComponent<Inventory>();
 
 		collected = true;
+
+		SetSprite();
 	}
 
 	private void Update()
@@ -22,6 +24,8 @@ public class SeedCollectInteraction : MonoBehaviour
 		if (player.transform.position.y > 6)
 		{
 			collected = false;
+
+			SetSprite();
 		}
 
 	}
@@ -31,6 +35,9 @@ public class SeedCollectInteraction : MonoBehaviour
 		if (!collected && collision.tag == "Player")
 		{
 			collected = true;
+
+			SetSprite();
+
 			if (color_seed == 0)
             {
 				inventory.green_seed += Random.Range(1, 4);
@@ -45,5 +52,14 @@ public class SeedCollectInteraction : MonoBehaviour
 			}
 
 		}
+	}
+
+	private void SetSprite()
+    {
+		Transform collectedTransform = transform.Find("Collected");
+		Transform uncollectedTransform = transform.Find("Uncollected");
+
+		uncollectedTransform.GetComponent<SpriteRenderer>().enabled = !collected;
+		collectedTransform.GetComponent<SpriteRenderer>().enabled = collected;
 	}
 }
