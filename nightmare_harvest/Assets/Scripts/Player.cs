@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float groundCheckRadius;
     public Animator animator;
+    private bool facingRight = true;
 
     private void Start()
     {
@@ -41,6 +42,15 @@ public class Player : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         rigidBody.velocity = new Vector3(horizontalInput * speed, rigidBody.velocity.y);
         animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
+
+        if(horizontalInput > 0 && !facingRight)
+        {
+            Flip();
+        }
+        if(horizontalInput < 0 && facingRight)
+        {
+            Flip();
+        }
     }
 
     public bool GroundCheck()
@@ -67,5 +77,14 @@ public class Player : MonoBehaviour
             rigidBody.AddForce(Vector2.up * jumpVelocity);
             Debug.Log("Space");
         }
+    }
+
+    void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 }
