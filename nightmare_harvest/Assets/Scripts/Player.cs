@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     private Transform groundCheck;
     [SerializeField]
     private float groundCheckRadius;
+    public Animator animator;
 
     private void Start()
     {
@@ -26,6 +27,8 @@ public class Player : MonoBehaviour
     {
         GroundCheck();
         JumpCheck();
+
+        animator.SetFloat("yVelocity", rigidBody.velocity.y);
     }
 
     private void FixedUpdate()
@@ -37,11 +40,22 @@ public class Player : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         rigidBody.velocity = new Vector3(horizontalInput * speed, rigidBody.velocity.y);
+        animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
     }
 
     public bool GroundCheck()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+         if (!isGrounded)
+        {
+            animator.SetBool("isJumping", true);
+        }
+        else
+        {
+            animator.SetBool("isJumping", false);
+        }
+
         return isGrounded;
     }
 
