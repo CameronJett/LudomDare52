@@ -19,7 +19,13 @@ public class StartGameUi : MonoBehaviour
 		Inventory inventory = GameObject.Find("Player").GetComponent<Inventory>();
 		VisualElement main_ui = GameObject.Find("Ui").GetComponent<UIDocument>().rootVisualElement;
 		NightmareHarvestUi harvest_ui = GameObject.Find("Ui").GetComponent<NightmareHarvestUi>();
+		VisualElement greenStar = main_ui.Q<VisualElement>("GreenStar");
+		VisualElement blueStar = main_ui.Q<VisualElement>("BlueStar");
+		VisualElement redStar = main_ui.Q<VisualElement>("RedStar");
 
+		greenStar.visible = true;
+		blueStar.visible = false;
+		redStar.visible = false;
 
 		harvest_ui.score = 0;
 		harvest_ui.time = 180;
