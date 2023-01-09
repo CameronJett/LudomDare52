@@ -7,14 +7,18 @@ public class Window : MonoBehaviour
     bool isSleeping = false;
     bool isAboutToWakeUp = false;
     int count = 0;
+    int seedLevel = 0;
     GameObject sleepPlaceholder;
-    Transform sleepBubble; 
+    Transform sleepBubble;
+    UnityEngine.U2D.Animation.SpriteLibrary sl;
     string seedType = null;
 
     // Start is called before the first frame update
     void Start()
     {
         sleepBubble = transform.GetChild(1);
+        sl = sleepBubble.GetComponent<UnityEngine.U2D.Animation.SpriteLibrary>();
+        Debug.Log("Sprite Library: " + sl.ToString());
         WakeUp();
     }
 
@@ -25,6 +29,7 @@ public class Window : MonoBehaviour
             if (count >= 30 * 10) // only update every 10 seconds
                 {
                     RunSleepCycle();
+                    PromoteSeedLevel();
                     count = 0;
                 }
 
@@ -56,7 +61,6 @@ public class Window : MonoBehaviour
         {
             Debug.Log("going to sleep: " + StrB);
             GoToSleep();
-            
         }
     }
 
@@ -109,5 +113,14 @@ public class Window : MonoBehaviour
     public void PlantSeed(string seedType)
     {
         this.seedType = seedType;
+        this.seedLevel = 0;
+        sleepBubble.GetComponent<SpriteRenderer>().sprite = sl.GetSprite(seedType, "" + this.seedLevel);
+    }
+
+    void PromoteSeedLevel() {
+        if (seedLevel < 2 && seedType != null) {
+            seedLevel++;
+            sleepBubble.GetComponent<SpriteRenderer>().sprite = sl.GetSprite(seedType, "" + this.seedLevel);
+        }
     }
 }
