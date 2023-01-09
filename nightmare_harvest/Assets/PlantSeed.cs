@@ -36,7 +36,6 @@ public class PlantSeed : MonoBehaviour
 
     void TryToPlantSeed()
     {
-        Debug.Log( "window: " + this.window.CanPlantSeedHere() );
         if (window != null && window.CanPlantSeedHere())
         {
             window.PlantSeed( inventory.UseSeed() );

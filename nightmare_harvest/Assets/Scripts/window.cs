@@ -9,7 +9,7 @@ public class Window : MonoBehaviour
     int count = 0;
     GameObject sleepPlaceholder;
     Transform sleepBubble; 
-    string seedType;
+    string seedType = null;
 
     // Start is called before the first frame update
     void Start()
@@ -86,6 +86,7 @@ public class Window : MonoBehaviour
         isSleeping = false;
         isAboutToWakeUp = false;
         sleepBubble.GetComponent<Renderer>().enabled = false;
+        seedType = null;
     }
 
     void HitSnoozeButton()
